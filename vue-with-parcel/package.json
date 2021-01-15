@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clear-build-cache": "rm -rf .cache/ dist/",
+    "dev": "parcel ./index.html",
+    "build": "npx cross-env NODE_ENV=production parcel build ./index.html --public-url ./",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +24,8 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
     "vue-template-compiler": "^2.6.12"
   }
 }

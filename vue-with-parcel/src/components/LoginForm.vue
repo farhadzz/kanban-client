@@ -60,7 +60,7 @@ export default {
         email: '',
         password: '',
         clientId: '1026188642749-hq5segt5b8emvesnu54280ksjgh7visf.apps.googleusercontent.com',
-        url: 'http://localhost:4000'
+        url: 'https://server-kanban-farhad.herokuapp.com/'
       }
     },
     methods: {

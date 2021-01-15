@@ -41,7 +41,7 @@ export default {
         return {
             message: 'Hello World',
             currentPage: 'register',
-            url: 'http://localhost:4000',
+            url: 'https://server-kanban-farhad.herokuapp.com',
             categories: [],
             dataTask: {},
             

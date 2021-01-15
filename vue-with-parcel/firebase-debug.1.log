@@ -1,0 +1,75 @@
+[debug] [2021-01-15T15:07:12.833Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T15:07:12.838Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --except functions
+[debug] [2021-01-15T15:07:12.838Z] CLI Version:   9.2.0
+[debug] [2021-01-15T15:07:12.839Z] Platform:      win32
+[debug] [2021-01-15T15:07:12.839Z] Node Version:  v12.19.0
+[debug] [2021-01-15T15:07:12.842Z] Time:          Fri Jan 15 2021 22:07:12 GMT+0700 (Western Indonesia Time)
+[debug] [2021-01-15T15:07:12.842Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T15:07:12.842Z] 
+[debug] [2021-01-15T15:07:12.853Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-15T15:07:12.854Z] > authorizing via signed-in user
+[debug] [2021-01-15T15:07:12.854Z] [iam] checking project kanban-f-z-z for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-01-15T15:07:12.860Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/kanban-f-z-z:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-01-15T15:07:14.135Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 Jan 2021 15:07:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1014","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T15:07:14.138Z] > refreshing access token with scopes: []
+[debug] [2021-01-15T15:07:14.139Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-15T15:07:14.334Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Fri, 15 Jan 2021 15:07:16 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T15:07:14.391Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kanban-f-z-z [none]
+[debug] [2021-01-15T15:08:01.777Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T15:08:01.781Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-01-15T15:08:01.781Z] CLI Version:   9.2.0
+[debug] [2021-01-15T15:08:01.782Z] Platform:      win32
+[debug] [2021-01-15T15:08:01.782Z] Node Version:  v12.19.0
+[debug] [2021-01-15T15:08:01.784Z] Time:          Fri Jan 15 2021 22:08:01 GMT+0700 (Western Indonesia Time)
+[debug] [2021-01-15T15:08:01.784Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T15:08:01.785Z] 
+[debug] [2021-01-15T15:08:01.797Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-15T15:08:01.798Z] > authorizing via signed-in user
+[debug] [2021-01-15T15:08:01.799Z] [iam] checking project kanban-f-z-z for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-01-15T15:08:01.804Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-15T15:08:01.805Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-15T15:08:02.098Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 15 Jan 2021 15:08:04 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T15:08:02.146Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/kanban-f-z-z:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-01-15T15:08:03.433Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 Jan 2021 15:08:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1072","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T15:08:03.435Z] > refreshing access token with scopes: []
+[debug] [2021-01-15T15:08:03.435Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-15T15:08:03.697Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Fri, 15 Jan 2021 15:08:06 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T15:08:03.773Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kanban-f-z-z [none]
+[debug] [2021-01-15T15:08:04.184Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kanban-f-z-z 200
+[debug] [2021-01-15T15:08:04.184Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kanban-f-z-z {"projectId":"kanban-f-z-z","projectNumber":"974849581045","displayName":"Kanban-F-Z-Z","name":"projects/kanban-f-z-z","resources":{"hostingSite":"kanban-f-z-z"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'kanban-f-z-z'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-01-15T15:08:04.204Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-15T15:08:04.204Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-15T15:08:04.432Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Fri, 15 Jan 2021 15:08:06 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T15:08:04.469Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/kanban-f-z-z/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-01-15T15:08:06.251Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 Jan 2021 15:08:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[kanban-f-z-z]: beginning deploy... 
+[debug] [2021-01-15T15:08:27.391Z] Error: EPERM: operation not permitted, scandir 'E:/hacktiv8/Phase2/kanban-client/vue-with-parcel/firebase-debug.log'
+    at Object.readdirSync (fs.js:955:3)
+    at GlobSync._readdir (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:41)
+    at GlobSync._readdirInGlobStar (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:48:10)
+    at Function.globSync [as sync] (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:26:10)
+    at listFiles (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:19)
+    at _runDeploys (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:31:23)
+    at module.exports (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:67:12)
+    at _chain (C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:23:40)
+    at C:\Users\farha\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:67:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
