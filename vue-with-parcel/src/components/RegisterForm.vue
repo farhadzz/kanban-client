@@ -18,28 +18,31 @@
 
         </div>
       </div>
-      <form class="form-container" @submit.prevent="registerSubmit">
-        <h3 class="register-p">Register</h3>
-        <div class="mb-3">
-          <label for="name-register" class="form-label">Name</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" v-model="name">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" aria-describedby="emailHelp" v-model="email">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" v-model="password">
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-danger" type="submit" id='register-submit'>Register</button>
-          <button class="btn btn-secondary" type="button" @click="cancel">Cancel</button>
-        </div>
-      </form>
+      <div class="col-sm-6 col-md-6" style="width: auto">
+        <form class="form-container" @submit.prevent="registerSubmit">
+          <h3 class="register-p">Register</h3>
+          <div class="mb-3">
+            <label for="name-register" class="form-label">Name</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" v-model="name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" aria-describedby="emailHelp" v-model="email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" v-model="password">
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-danger" type="submit" id='register-submit'>Register</button>
+            <button class="btn btn-secondary" type="button" @click="cancel">Cancel</button>
+          </div>
+        </form>
+      </div>  
     </div>
   </div>
+  
 </div>
 </template>
 

@@ -18,39 +18,49 @@
           </div>
         </div>
       </div>
-      <form class="form-container" @submit.prevent="loginSubmit">
-        <h3 class="login-p">Login</h3>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" aria-describedby="emailHelp" v-model="email">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="register-password" class="form-label">Password</label>
-          <input type="password" class="form-control" v-model="password">
-        </div>
-        <button type="submit" class="btn btn-primary" id="login-btn" >Log In</button>
-        <button class="btn btn-success" type="button" @click="registerButton">Register</button>
-        <div>
-          <br>
-          <h5> or Sign in by Google</h5>
-          <br>
-        </div>
-        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-      </form>
+      <div class="col-sm-6 col-md-6" style="width: auto">
+        <form class="form-container" @submit.prevent="loginSubmit">
+          <h3 class="login-p">Login</h3>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" aria-describedby="emailHelp" v-model="email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="register-password" class="form-label">Password</label>
+            <input type="password" class="form-control" v-model="password">
+          </div>
+          <button type="submit" class="btn btn-primary" id="login-btn" >Log In</button>
+          <button class="btn btn-success" type="button" @click="registerButton">Register</button>
+          <div>
+            <br>
+            <h5> or Sign in by Google</h5>
+            <br>
+          </div>
+        </form>
+          <button v-google-signin-button="clientId" class="google-signin-button btn btn-success"> Continue with Google</button>
+      </div>  
     </div>
   </div>
 </template>
 
 <script>
 import Swal from "sweetalert2"
+import GoogleSignInButton from 'vue-google-signin-button-directive'
+import axios from "axios"
 
 export default {
+
     name: "LoginForm",
+    directives: {
+        GoogleSignInButton
+    },
     data() {
       return {
         email: '',
-        password: ''
+        password: '',
+        clientId: '1026188642749-hq5segt5b8emvesnu54280ksjgh7visf.apps.googleusercontent.com',
+        url: 'http://localhost:4000'
       }
     },
     methods: {
@@ -59,17 +69,33 @@ export default {
             email: this.email, 
             password: this.password
           }
-          if(!obj.email || !obj.password) {
-          Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Email and Password is required'
-          })
-        } else {
-          // console.log(obj, "obj")
           return this.$emit('loginSubmit', obj)
-        }
+        
       },
+      OnGoogleAuthSuccess (idToken) {
+            
+            const id_token = idToken
+        
+            axios({
+                method: "POST",
+                url: this.url + "/googleLogin",
+                data: {
+                    id_token
+                }
+            })
+            .then(result => {
+                // console.log(result)
+                localStorage.setItem('access_token', result.data.access_token)
+                this.$emit('loggedIn')
+                // console.log(result)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        },
+        OnGoogleAuthFail (error) {
+            console.log(error)
+        },
       registerButton() {
         return this.$emit('registerButton')
       }

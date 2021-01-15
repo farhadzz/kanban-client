@@ -11,8 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "s": "^1.0.0",
     "sweetalert2": "^10.13.0",
     "vue": "^2.6.12",
+    "vue-google-signin-button-directive": "^1.0.3",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
